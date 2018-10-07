@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   containershadow: {
     flex: 1,
     width: '92.5%',
+    maxHeight: '40%',
     justifyContent: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 25,
@@ -65,6 +66,7 @@ const styles = StyleSheet.create({
   image: {
     width: null,
     flex: 1,
+    minHeight: '20%',
     //position: 'relative',
     //top: -50,
   },
