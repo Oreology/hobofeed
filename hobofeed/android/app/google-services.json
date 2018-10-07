@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "740529672952",
+    "firebase_url": "https://hobofeed-218705.firebaseio.com",
+    "project_id": "hobofeed-218705",
+    "storage_bucket": "hobofeed-218705.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740529672952:android:68de7877d4bcb42c",
+        "android_client_info": {
+          "package_name": "com.hobofeed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740529672952-ad0fllgthdp6c6ihuimm5ou0ocpdvv4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKa6LYTz03Z4KfjmljVzq88J7OeAp_Hic"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740529672952:android:243967b5f11a5e5d",
+        "android_client_info": {
+          "package_name": "com.jinhang.hobofeed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740529672952-ad0fllgthdp6c6ihuimm5ou0ocpdvv4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKa6LYTz03Z4KfjmljVzq88J7OeAp_Hic"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
