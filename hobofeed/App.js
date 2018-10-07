@@ -3,6 +3,12 @@ import { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import { createStackNavigator, createTabNavigator } from 'react-navigation';
 
+import { YellowBox } from 'react-native';
+
+YellowBox.ignoreWarnings([
+  'Method ',
+]);
+
 import FoodScreen from './components/screens/food';
 import DetailScreen from './components/screens/detail';
 import AcademicScreen from './components/screens/academic';
