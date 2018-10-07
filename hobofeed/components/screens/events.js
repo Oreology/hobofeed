@@ -6,7 +6,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.homesrc}>
-        <Text style={styles.hometxt}>HELLO WORLD!</Text>
+        <Text style={styles.hometxt}>EVENTS SCREEN!!</Text>
         <Button
           title="Go to Details"
           onPress={ () => this.props.navigation.navigate('Details') }
