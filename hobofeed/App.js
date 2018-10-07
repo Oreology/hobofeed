@@ -1,49 +1,74 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View, Button } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View style={styles.homesrc}>
+        <Text style={styles.hometxt}>HELLO WORLD!</Text>
+        <Button
+          title="Go to Details"
+          onPress={ () => this.props.navigation.navigate('Details') }
+        />
+      </View>
+    )
+  }
+}
+
+class DetailScreen extends React.Component {
+  render() {
+    return (
+      <View style={styles.detailsrc}>
+        <Text style={styles.detailtxt}>DETAILS SCREEN!!!</Text>
+        <Button
+          title="Go to Details Again!!!!"
+          onPress={ () => this.props.navigation.navigate('Details') }
+        />
       </View>
     );
   }
 }
 
+const RootStack = createStackNavigator(
+  {
+  Home: HomeScreen,
+  Details: DetailScreen,
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+export default class App extends React.Component {
+  render() {
+    return <RootStack/>
+  }
+}
+
 const styles = StyleSheet.create({
-  container: {
+  homesrc: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
-  welcome: {
-    fontSize: 20,
+  hometxt: {
+    fontSize: 40,
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  detailsrc: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ff68b3',
   },
+  detailtxt: {
+    fontSize: 30,
+    textAlign: 'center',
+    color: '#FFFFFF',
+  }
+
 });
