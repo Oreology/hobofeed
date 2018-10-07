@@ -29,16 +29,17 @@ public class MainApplication extends Application implements ReactApplication {
     }
 
     @Override
-      public List<ReactPackage> createAdditionalReactPackages() {
-      return getPackages();
-    }
-
-    @Override
     protected String getJSMainModuleName() {
       return "index";
     }
   };
 
+
+  @Override
+    public List<ReactPackage> createAdditionalReactPackages() {
+    return getPackages();
+  }
+  
   @Override
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
