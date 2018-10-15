@@ -13,10 +13,24 @@ import DetailScreen from "./components/screens/detail";
 import AcademicScreen from "./components/screens/academic";
 import EventsScreen from "./components/screens/events";
 
+//Testing
+import mcchickenscreen from "./components/screens/mcchicken";
+import mieayamscreen from "./components/screens/mieayam";
+import tehbotolscreen from "./components/screens/tehbotol";
+import ramenscreen from "./components/screens/ramen";
+import sushiscreen from "./components/screens/sushi";
+import chickennuggetsscreen from "./components/screens/chickennuggets";
+
 const FoodStack = createStackNavigator(
   {
     Food: FoodScreen,
-    Details: DetailScreen
+    Details: DetailScreen,
+    mcchicken: mcchickenscreen,
+    mieayam: mieayamscreen,
+    tehbotol: tehbotolscreen,
+    sushi: sushiscreen,
+    ramen: ramenscreen,
+    chickennuggets: chickennuggetsscreen,
   },
   {
     headerMode: "none",
