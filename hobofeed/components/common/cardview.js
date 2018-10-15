@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
+import { withNavigation } from 'react-navigation';
 
 export class CardView extends Component {
-
-  onPress = screenName => {
-    //this.props.navigation.navigate(screenName);
-  }
 
   render() {
     return (
       <View style={styles.containershadow}>
         <TouchableOpacity
           style={styles.touchview}
-          onPress={this.onPress(this.props.screenName)}
+          onPress={ () => this.props.navigation.navigate(this.props.screenname) }
         >
           <View style={styles.container}>
             <Image style={styles.image}
@@ -83,7 +80,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardView;
+export default withNavigation(CardView);
 
 
 

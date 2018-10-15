@@ -3,32 +3,37 @@
     { "title": "Mie Ayam",
       "image": "http://asiantoprecipes.weebly.com/uploads/5/3/4/0/5340076/12.jpg?718",
       "description": "Mie Ayam adalah makan sederhana yang paling enak di Indonesia. Bisa dibeli dari warung-warung kecil.",
+      "screenname": "Details",
     },
     {
         "title": "Teh Botol",
         "image": "https://media-cdn.tripadvisor.com/media/photo-s/05/e0/7b/ab/dobiel-warung-babi-guling.jpg",
         "description": "Teh botol adalah minuman yang enak banget!!! dari Indonesia.",
-
+        "screenname": "Details",
      },
      {
          "title": "Sushi",
          "image": "https://img.grouponcdn.com/deal/5nqMiaVPQsLESRWCmMxPNQ/shutterstock_124581196-1500x900.jpg/v1/c700x420.jpg",
          "description": "Sushi tai mei is amazing Japanese food from JAPAN!!!",
+         "screenname": "Details",
       },
       {
           "title": "McChicken",
           "image": "https://www.mcdonalds.co.za/sites/default/files/productThumbnail/mcd-food-chicken-mcchicken-burger.png",
           "description": "1$ wonder.",
+          "screenname": "Details",
        },
        {
            "title": "Chicken Nuggets",
            "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/9/12/1/FN_Picky-Eaters-Chicken-Nuggets_s4x3.jpg.rend.hgtvcom.616.462.suffix/1383770571120.jpeg",
            "description": "CHICKEN NUGGET!!!!!!!!!!",
+           "screenname": "Details",
         },
         {
             "title": "Poor College Student Ramen",
             "image": "https://images-na.ssl-images-amazon.com/images/I/81se0cOxtpL._SY355_.jpg",
             "description": "Title speaks for itself.",
+            "screenname": "Details",
          },
   ]
 }

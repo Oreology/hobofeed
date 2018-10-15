@@ -35,6 +35,7 @@ export default class HomeScreen extends React.Component {
         imgsource={item.item.image}
         title={item.item.title}
         description={item.item.description}
+        screenname={item.item.screenname}
       />
     );
   };
