@@ -42,7 +42,7 @@ export default class HomeScreen extends React.Component {
   render() {
     console.log(this.state.foods);
     return (
-      <FlatList data={this.state.foods.data} renderItem={this.renderCardItem} />
+      <FlatList style={styles.flatliststyle} data={this.state.foods.data} renderItem={this.renderCardItem} />
 
 
 
@@ -77,6 +77,10 @@ export default class HomeScreen extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  flatliststyle: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+  },
   homesrc: {
     flex: 1,
     justifyContent: 'center',

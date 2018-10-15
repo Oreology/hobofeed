@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 
 export class CardView extends Component {
+
+  onPress = screenName => {
+    //this.props.navigation.navigate(screenName);
+  }
+
   render() {
     return (
       <View style={styles.containershadow}>
-        <View style={styles.container}>
-          <Image style={styles.image}
-            source={ {uri: this.props.imgsource} }
-          />
-          <Text style={styles.title}>{this.props.title}</Text>
-          <Text style={styles.description}>{this.props.description}</Text>
-        </View>
+        <TouchableOpacity
+          style={styles.touchview}
+          onPress={this.onPress(this.props.screenName)}
+        >
+          <View style={styles.container}>
+            <Image style={styles.image}
+              source={ {uri: this.props.imgsource} }
+            />
+            <Text style={styles.title}>{this.props.title}</Text>
+            <Text style={styles.description}>{this.props.description}</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  touchview: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -32,32 +45,34 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     //left: '3.75%',
     width: '95%',
-    height: 250,
+    height: 300,
     justifyContent: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 25,
-    shadowOpacity: 0.15,
+    shadowOpacity: 0.125,
     shadowOffset: {
-      height: 1,
+      height: 5,
       width: 0,
     },
     shadowRadius: 10,
     //overflow: 'hidden',
     //marginLeft: 10,
     //marginRight: 10,
-    marginTop: 15,
+    marginTop: 25,
   },
   title: {
     fontFamily: 'Avenir Next',
     fontWeight: '400',
     color: '#000000',
-    fontSize: 30,
+    fontSize: 25,
+    marginLeft: 10,
   },
   description: {
     fontFamily: 'Avenir Next',
     fontWeight: 'normal',
     color: '#000000',
-    fontSize: 15,
+    fontSize: 14,
+    marginLeft: 10,
   },
   image: {
     width: null,
