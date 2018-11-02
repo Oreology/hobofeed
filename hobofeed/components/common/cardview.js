@@ -1,17 +1,50 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity, Animated } from 'react-native';
 //import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 
+const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
+
 export class CardView extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded    : false,
+      animation   : new Animated.Value()
+    };
+    this.buttondown = this.buttondown.bind(this);
+  }
+
+  buttondown() {
+    //this.props.navigation.navigate(this.props.screenname)
+    this.setState({
+      expanded : !this.state.expanded
+    });
+
+    let initialValue  = 50
+        finalValue    = 100
+
+    this.state.animation.setValue(initialValue);
+    Animated.spring(
+      this.state.animation,
+      {
+        toValue: finalValue
+      }
+    ).start();
+  };
+
+
+  /*toggle() {
+    l
+  }*/
 
   render() {
     return (
       <View style={styles.containershadow}>
-        <TouchableOpacity
+        <AnimatedTouchable
           style={styles.touchview}
-          onPress={ () => this.props.navigation.navigate(this.props.screenname) }
-        >
+          onPress={ this.buttondown } >
           <View style={styles.container}>
             <Image style={styles.image}
               source={ {uri: this.props.imgsource} }
@@ -19,7 +52,7 @@ export class CardView extends Component {
             <Text style={styles.title}>{this.props.title}</Text>
             <Text style={styles.description}>{this.props.description}</Text>
           </View>
-        </TouchableOpacity>
+        </AnimatedTouchable>
       </View>
     );
   }
